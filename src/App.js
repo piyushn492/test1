@@ -1,12 +1,14 @@
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./Components/Dashboard";
+import List from "./Components/List";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/list" element={<List />} />
+      </Routes>
     </div>
   );
-}
-
-export default App;
+} 
